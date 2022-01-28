@@ -1,16 +1,15 @@
 import sys
 
+def selection_sort(arr):
+    n = len(arr)
+    for i in range(0, n - 1):
+        min_index = i
+        for j in range(i + 1, n):
+            if arr[j] < arr[min_index]:
+                min_index = j
+        arr[i], arr[min_index] = arr[min_index], arr[i]
+    return arr
+
 A = [64, 25, 12, 22, 11]
 
-for i in range(len(A)):
-    min_idx = i
-
-    for j in range(i+1, len(A)):
-        if A[min_idx] > A[j]:
-            min_idx = j
-
-    A[i], A[min_idx] = A[min_idx], A[i]
-
-print("Selection Sorted Array")
-for i in range(len(A)):
-    print(A[i], end=" ")
+print(selection_sort(A))
