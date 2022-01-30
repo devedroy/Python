@@ -1,2 +1,1 @@
-# Python
-All in python-programming
+Will be updated in future
