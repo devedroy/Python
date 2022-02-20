@@ -1,19 +1,23 @@
-#https://www.techiedelight.com/levenshtein-distance-edit-distance-problem/
-#https://www.geeksforgeeks.org/edit-distance-dp-5/
 
-def levenshteinDistance(X, m, Y, n):
-    if m == 0:
-        return n
-    if n == 0:
-        return m
-
-    cost = 0 if X[m-1] == Y[n-1] else 1
-
-    return min(levenshteinDistance(X, m - 1, Y, n) + 1, levenshteinDistance(X, m, Y, n - 1) + 1, levenshteinDistance(X, m - 1, Y, n - 1) + cost)
-if __name__ == '__main__':
-    x = 'kitten'
-    y = 'sitting'
-
-    print(levenshteinDistance(x, len(x) y, len(y)))
-
-#https://www.techiedelight.com/data-structures-and-algorithms-problems/
+def seq_sum(start, stop):
+    return(start + stop - 1) * (stop - start) // 2
+    
+def highestProfit(numSuppliers, inventory, order):
+    # WRITE YOUR CODE HERE
+    count = sorted(Counter(inventory).items(), reverse=True)
+    suppliers = 0
+    profit = 0
+    left = order
+    
+    for i, (stock, extra) in enumerate(count):
+        # TODO: write code...
+        next_stock = count[i + 1][0] if i < len(count) - 1 else 0
+        suppliers += extra
+        supply = suppliers * (stock - next_stock)
+        full, part = divmod(min(left, supply), suppliers)
+        profit += suppliers * seq_sum(stock - full + 1, stock + 1)  \
+        + part * (stock - full)
+        left -= supply
+        if left <= 0:
+            break
+    return profit
