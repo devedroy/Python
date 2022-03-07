@@ -41,6 +41,11 @@ def height(root):
 root = Node(1)
 root.left = Node(2)
 root.right = Node(3)
-print(root.left.value)
+root.left.left = Node(4)
+root.left.right = Node(5)
+# print(root.left.value)
 
-print(count_nodes(root))
+# print(count_nodes(root))
+
+#inorder LrR=4 2 5 1 3
+inorder(root)
