@@ -1,4 +1,6 @@
-def divideArray(self, nums: List[int]) -> bool:
+class Solution:
+    def divideArray(self, nums: List[int]) -> bool:
+        
         length = len(nums)
         nPairs = length // 2
         
@@ -14,7 +16,7 @@ def divideArray(self, nums: List[int]) -> bool:
         
         mapper = countFreq(nums)
         
-        if len(mapper) == nPairs:
+        if len(mapper) <= nPairs:
             for ele in mapper.values():
                 if ele % 2 == 0:
                     res = True
