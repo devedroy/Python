@@ -8,4 +8,3 @@ class Solution:
                 nums2.remove(n)
         return res
 
-print([1]*5)
