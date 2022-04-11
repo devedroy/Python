@@ -1,0 +1,63 @@
+1. DDL - Data Definition Language
+
+    CREATE - CREATE TABLE Student(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        age INTEGER
+    );
+
+    DROP
+    DROP TABLE Student;
+
+    ALTER
+    ALTER TABLE Student ADD (
+        address TEXT
+    );
+
+    TRUNCATE
+    TRUNCATE TABLE Student;
+
+    COMMENT
+
+    RENAME
+    RENAME TABLE Student TO Student_old;
+
+2. DQL - Data Query Language
+    SELECT
+    SELECT * FROM Student;
+    SELECT name, age FROM Student;
+    SELECT * FROM Student WHERE age > 20;
+
+3. DML - Data Manipulation Language
+    INSERT
+    INSERT INTO Student (name, age) VALUES ('John', 20);
+
+    UPDATE
+    UPDATE Student SET name = 'John' WHERE id = 1;
+
+    DELETE
+    DELETE FROM Student WHERE id = 1;
+
+    LOCK
+    CALL
+    EXPLAIN PLAN
+
+4. DCL - Data Control Language
+    GRANT
+    
+    REVOKE
+
+*. TCL - Transaction Control Language
+    COMMIT
+    COMMIT TRANSACTION;
+
+    ROLLBACK
+    ROLLBACK TRANSACTION;
+
+    SAVEPOINT
+    SAVEPOINT;
+
+    SET TRANSACTION
+
+
+
