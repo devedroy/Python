@@ -1,8 +1,5 @@
-
-
-
 class Solution:
-    def majorityElement(self, nums):
+    def majorityElement(self, nums: List[int]) -> int:
         countMap = {}
         for n in nums:
             if n in countMap:
@@ -13,6 +10,4 @@ class Solution:
         for k in countMap.keys():
             if countMap[k] >= countMap[res]:
                 res = k
-        return res
-
-print(Solution().majorityElement([2,2,1,1,1,2,2]))
+        return res 

@@ -4,7 +4,7 @@ class Solution:
         curMin, curMax = 1, 1
         for n in nums:
             tmp = curMax * n
-            curMax = max(curMax * n, curMin * n, n)
+            curMax = max(tmp, curMin * n, n)
             curMin = min(tmp, curMin * n, n)
             res = max(curMax, res)
         return res
