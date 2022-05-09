@@ -19,8 +19,12 @@ class Solution {
     public static int search(TreeNode root, int num, Map<Integer> levelOderMap) {
         if (root != null) [
             if (root.val == num) {
-                levelOrderStoredInMap
+                levelOrderStoredInMap(root.left, 1, levelOderMap);
+                levelOrderStoredInMap(root.right, 1, levelOderMap);
+                return 1;
             }
+            int k = search(root.left, num, levelOderMap);
+
         ]
     }
 }
