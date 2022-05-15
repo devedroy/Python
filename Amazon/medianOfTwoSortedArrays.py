@@ -12,9 +12,9 @@ def medianOfTwoSortedArrays(arr1, arr2):
     return median(arr1)
 
 nums1 = [1, 2, 3, 4, 5, 6]
-# nums2 = [2, 3, 4, 5]
-# print(medianOfTwoSortedArrays(nums1, nums2))
-print(median(nums1))
+nums2 = [2, 3, 4, 5]
+print(medianOfTwoSortedArrays(nums1, nums2))
+# print(median(nums1))
 
 
 # print(median(nums1))

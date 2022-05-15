@@ -23,4 +23,4 @@ while no_edge < V - 1:
     y = 0
     for i in range(V):
         if selected[i]:
-            for j in range(V)
+            for j in range(V):
